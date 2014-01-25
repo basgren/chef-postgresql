@@ -12,7 +12,7 @@ apt_preference "pgdg.pref" do
 end
 
 case node["platform"]
-when "ubuntu"
+when "ubuntu", "linuxmint"
   include_recipe "postgresql::apt_repository"
   package "postgresql-common"  # install common files
 when "debian"
